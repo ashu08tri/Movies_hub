@@ -10,7 +10,7 @@ function MovieDetails() {
 
   return (
     <>
-      <Box sx={{ bgcolor: 'black', height: {xs: '120vh', md:'140vh'}}}>
+      <Box sx={{ bgcolor: 'black', height: '135vh'}}>
         <Container sx={{ height: {xs:'40vh', sm: '60vh'}, background: `url(${Image}${data.backdrop_path})`, backgroundSize: 'cover' }}>
           <Grid container height={'100vh'} columnSpacing={2}>
             <Grid item xs={10} sx={{display: 'flex' , alignItems: 'flex-end',justifyContent: 'space-between', my: '15px', pt:{xs: '100px', sm: '0'}}}>
@@ -66,7 +66,7 @@ function MovieDetails() {
             </Grid>
             <Grid item mt={5} color={'white'}>
             <Typography variant="h5">Production Companies</Typography>
-              {data.production_companies.map(item => <Box key={item.id}>
+              {data.production_companies.slice(-5).map(item => <Box key={item.id}>
                 <Typography>{item.name}</Typography>
               </Box>)}
             </Grid>
