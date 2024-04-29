@@ -55,14 +55,14 @@ export default function MainNavigation(props) {
       <ListItem>
           <ListItemButton>
             <ListItemText sx={{ textAlign: 'center' }}>
-              <NavLink to='/popular' className={({ isActive }) => isActive ? styles.active : undefined}>About</NavLink>
+              <NavLink to='/' className={({ isActive }) => isActive ? styles.active : undefined}>About</NavLink>
             </ListItemText>
 
           </ListItemButton>
         </ListItem>
         <ListItem>
           <ListItemButton>
-            <ListItemText sx={{ textAlign: 'center' }}><NavLink to='/top-rated' className={({ isActive }) => isActive ? styles.active : undefined}>Contact</NavLink></ListItemText>
+            <ListItemText sx={{ textAlign: 'center' }}><NavLink to='/' className={({ isActive }) => isActive ? styles.active : undefined}>Contact</NavLink></ListItemText>
           </ListItemButton>
         </ListItem>
       </List>
@@ -117,8 +117,8 @@ export default function MainNavigation(props) {
               <NavLink to='/' className={({ isActive }) => isActive ? styles.active : undefined}> MoviesHub</NavLink>
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              <Button><NavLink to='/popular' className={({ isActive }) => isActive ? styles.active : undefined}>About</NavLink></Button>
-              <Button><NavLink to='/top_rated' className={({ isActive }) => isActive ? styles.active : undefined}>Contact</NavLink></Button>
+              <Button><NavLink to='/' className={({ isActive }) => isActive ? styles.active : undefined}>About</NavLink></Button>
+              <Button><NavLink to='/' className={({ isActive }) => isActive ? styles.active : undefined}>Contact</NavLink></Button>
             </Box>
             <Box sx={{ ml: 6 }}>
               <Form method='get' action='movie' style={{ display: 'flex' }}>
