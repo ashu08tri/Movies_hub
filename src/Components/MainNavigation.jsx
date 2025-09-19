@@ -55,14 +55,9 @@ export default function MainNavigation(props) {
       <ListItem>
           <ListItemButton>
             <ListItemText sx={{ textAlign: 'center' }}>
-              <NavLink to='/'>About</NavLink>
+              <NavLink to='/about'>About</NavLink>
             </ListItemText>
 
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton>
-            <ListItemText sx={{ textAlign: 'center' }}><NavLink to='/'>Contact</NavLink></ListItemText>
           </ListItemButton>
         </ListItem>
       </List>
@@ -117,8 +112,7 @@ export default function MainNavigation(props) {
               <NavLink to='/' className={({ isActive }) => isActive ? styles.active : undefined}> MoviesHub</NavLink>
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              <Button><NavLink to='/'>About</NavLink></Button>
-              <Button><NavLink to='/'>Contact</NavLink></Button>
+              <Button><NavLink to='/about'>About</NavLink></Button>
             </Box>
             <Box sx={{ ml: 6 }}>
               <Form method='get' action='movie' style={{ display: 'flex' }}>
