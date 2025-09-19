@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Pages/Root";
 import Home from "./Pages/Home";
+import About from "./Pages/About";
 import Error from "./Pages/Error";
 import MovieDetails, {loader as movieDetails} from "./Pages/MovieDetails";
 import Search, {loader as searchedData} from "./Pages/Search";
@@ -12,6 +13,7 @@ function App() {
   const router = createBrowserRouter([
     {path: '/' , element: <Root />,errorElement: <Error/>, children: [
       {index: true, element: <Home apiKey={API_KEY}/>},
+      {path: '/about', element: <About />},
       {path: 'movie/:id' , element: <MovieDetails /> , loader: movieDetails},
       {path: 'movie/?', element: <Search />, loader: searchedData}
     ]}
